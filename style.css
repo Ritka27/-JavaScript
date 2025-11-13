@@ -1,0 +1,126 @@
+/* Сброс стилей */
+body { height: 200vh; }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Цветовая палитра */
+:root {
+    --dark-green: #2e4d2f;
+    --beige: #f5f0e1;
+    --brown: #8b5e3c;
+}
+
+/* Шапка */
+header {
+    background-color: var(--dark-green);
+    color: var(--beige);
+    padding: 40px 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+/* Навигация */
+nav {
+    background-color: var(--brown);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+
+nav ul li a {
+    display: block;
+    padding: 15px 25px;
+    color: var(--beige);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    background-color: #a67c52;
+}
+
+/* Основной контент */
+main {
+    display: flex;
+    gap: 20px;
+    padding: 30px 20px;
+    background-color: var(--beige);
+}
+
+/* Секция с статьями */
+.content-area {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+article {
+    background-color: #fff8f0;
+    padding: 20px;
+    border-left: 5px solid var(--dark-green);
+    border-radius: 8px;
+}
+
+article h2 {
+    color: var(--dark-green);
+    margin-bottom: 10px;
+}
+
+/* Боковая колонка */
+aside {
+    flex: 1;
+    background-color: #f0e7db;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+aside h2 {
+    color: var(--dark-green);
+    margin-bottom: 10px;
+}
+
+aside ul li {
+    margin-bottom: 10px;
+}
+
+/* Подвал */
+footer {
+    background-color: var(--dark-green);
+    color: var(--beige);
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Медиазапрос для мобильных устройств */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    aside {
+        order: -1;
+        margin-bottom: 20px;
+    }
+}

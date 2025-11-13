@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Онлайн обучение программированию</title>
+    <link rel="stylesheet" href="style.css">  <!-- Твой старый CSS можно оставить, но для галереи используй Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>  <!-- Добавь это! -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Онлайн обучение программированию</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .accordion{max-width:700px;margin:40px auto;padding:0 16px}
+        .accordion-item{border:1px solid #ccc;border-radius:8px;margin-bottom:8px;overflow:hidden}
+        .accordion-title{margin:0;background:#f8f8f8;cursor:pointer;padding:12px;font-weight:bold;transition:background 0.3s}
+        .accordion-title:hover{background:#e6e6e6}
+        .accordion-content{max-height:0;overflow:hidden;transition:max-height 0.4s ease,padding 0.3s ease;padding:0 12px}
+        .accordion-item.active .accordion-content{max-height:200px;padding:12px}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Учись программированию онлайн</h1>
+        <p>Стань профессионалом в IT, не выходя из дома!</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">Курсы</a></li>
+            <li><a href="#">Отзывы</a></li>
+            <li><a href="#">Контакты</a></li>
+        </ul>
+    </nav>
+
+    <main>
+    <!-- Галерея как отдельная секция (исправленная) -->
+    <section class="max-w-6xl mx-auto py-10 px-4 text-center">
+        <h2 class="text-3xl font-bold mb-8 text-gray-800">Галерея</h2>
+        
+        <!-- Фильтры: Кнопки -->
+        <div class="flex justify-center mb-8 space-x-4 flex-wrap">
+            <button class="filter-btn active px-6 py-3 bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600 transition-all duration-300" data-category="all">Все</button>
+            <button class="filter-btn px-6 py-3 bg-gray-200 text-gray-700 rounded-lg shadow-md hover:bg-green-500 hover:text-white transition-all duration-300" data-category="python">Python</button>
+            <button class="filter-btn px-6 py-3 bg-gray-200 text-gray-700 rounded-lg shadow-md hover:bg-purple-500 hover:text-white transition-all duration-300" data-category="web">Web</button>
+            <button class="filter-btn px-6 py-3 bg-gray-200 text-gray-700 rounded-lg shadow-md hover:bg-indigo-500 hover:text-white transition-all duration-300" data-category="mobile">Mobile</button>
+        </div>
+        
+        <!-- Галерея: Grid с исправленными путями и cursor-pointer -->
+        <div class="gallery-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Python -->
+            <img src="images/maxresdefault.jpg" alt="Проект на Python 1" class="gallery-item rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-48 object-cover cursor-pointer" data-category="python" loading="lazy">
+            <img src="images/WE3zUA9hDqw.jpg" alt="Проект на Python 2" class="gallery-item rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-48 object-cover cursor-pointer" data-category="python" loading="lazy">
+            <img src="images/9beec30b3750f81970253dd374efbd47.jpg" alt="Проект на Python 3" class="gallery-item rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-48 object-cover cursor-pointer" data-category="python" loading="lazy">
+            
+            <!-- Web -->
+            <img src="images/bb698200-6efc-11eb-910f-250cda75b482.jpg" alt="Веб-проект 1" class="gallery-item rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-48 object-cover cursor-pointer" data-category="web" loading="lazy">
+            <img src="images/57f5b4b770ce.jpeg" alt="Веб-проект 2" class="gallery-item rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-48 object-cover cursor-pointer" data-category="web" loading="lazy">
+            <img src="images/Risunok1-5.png" alt="Веб-проект 3" class="gallery-item rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-48 object-cover cursor-pointer" data-category="web" loading="lazy">
+            
+            <!-- Mobile -->
+            <img src="images/61794c6d5b191.jpg" alt="Мобильное приложение 1" class="gallery-item rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-48 object-cover cursor-pointer" data-category="mobile" loading="lazy">
+            <img src="images/Flutter-React-Native-UI-UX-Design-and-Customization-jpg.webp" alt="Мобильное приложение 2" class="gallery-item rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-48 object-cover cursor-pointer" data-category="mobile" loading="lazy">
+            <img src="images/i.webp" alt="Мобильное приложение 3" class="gallery-item rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-48 object-cover cursor-pointer" data-category="mobile" loading="lazy">
+        </div>
+    </section>
+
+    <aside class="lg:w-1/4 bg-white rounded-xl shadow-xl p-6 border border-gray-200">
+        <h2 class="text-xl font-bold mb-4 text-gray-800 border-b-2 border-green-500 pb-2">Преимущества обучения</h2>
+        <ul class="space-y-3">
+            <li class="flex items-center">
+                <span class="text-green-500 font-bold text-lg mr-2">✓</span>  <!-- Подсветка: галочка + цвет -->
+                <span class="text-gray-700"><span class="text-blue-600 font-semibold">Гибкий график</span></span>
+            </li>
+            <li class="flex items-center">
+                <span class="text-green-500 font-bold text-lg mr-2">✓</span>
+                <span class="text-gray-700"><span class="text-blue-600 font-semibold">Практические задания</span></span>
+            </li>
+            <li class="flex items-center">
+                <span class="text-green-500 font-bold text-lg mr-2">✓</span>
+                <span class="text-gray-700"><span class="text-blue-600 font-semibold">Поддержка преподавателей</span></span>
+            </li>
+            <li class="flex items-center">
+                <span class="text-green-500 font-bold text-lg mr-2">✓</span>
+                <span class="text-gray-700"><span class="text-blue-600 font-semibold">Сообщество студентов</span></span>
+            </li>
+        </ul>
+    </aside>
+</main>
+<section class="content-area py-8 px-4 max-w-6xl mx-auto">
+    <!-- Grid для карточек: 1 колонка на мобиле, 3 на десктопе -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Карточка 1: Почему учиться -->
+        <article class="bg-white rounded-xl shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 p-6 text-center border border-gray-200">
+            <h2 class="text-2xl font-bold mb-4 bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">Почему стоит учиться программированию?</h2>
+            <p class="text-gray-700 leading-relaxed">Программирование — это востребованный навык, который открывает двери в мир IT, помогает решать реальные задачи и создавать собственные проекты. Онлайн обучение дает гибкость: учись в удобное время и в комфортной обстановке.</p>
+        </article>
+
+        <!-- Карточка 2: Наши курсы -->
+        <article class="bg-white rounded-xl shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 p-6 text-center border border-gray-200">
+            <h2 class="text-2xl font-bold mb-4 bg-gradient-to-r from-green-500 to-blue-600 bg-clip-text text-transparent">Наши курсы</h2>
+            <p class="text-gray-700 leading-relaxed">Мы предлагаем курсы по Python, C#, Web-разработке, мобильным приложениям и многому другому. Каждый курс содержит практические задания и поддерживается опытными преподавателями.</p>
+        </article>
+
+        <!-- Карточка 3: Начни сейчас -->
+        <article class="bg-white rounded-xl shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 p-6 text-center border border-gray-200">
+            <h2 class="text-2xl font-bold mb-4 bg-gradient-to-r from-indigo-500 to-pink-600 bg-clip-text text-transparent">Начни прямо сейчас!</h2>
+            <p class="text-gray-700 leading-relaxed">Присоединяйся к нашей онлайн-платформе и сделай первый шаг к профессии мечты. Удобные уроки, пошаговые инструкции и поддержка сообщества помогут тебе освоить программирование легко и увлекательно.</p>
+        </article>
+    </div>
+</section>
+    </main>
+
+    <!-- Добавляем аккордеон внизу страницы -->
+    <section class="accordion">
+        <div class="accordion-item">
+            <h3 class="accordion-title">Часто задаваемые вопросы</h3>
+            <div class="accordion-content">
+                <p>Здесь вы найдете ответы на самые популярные вопросы о курсах, оплате и обучении.</p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h3 class="accordion-title">Как проходит обучение?</h3>
+            <div class="accordion-content">
+                <p>Вы получаете доступ к урокам, заданиям и общаетесь с преподавателями через онлайн-платформу.</p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h3 class="accordion-title">Можно ли учиться бесплатно?</h3>
+            <div class="accordion-content">
+                <p>Да, у нас есть бесплатные вводные курсы и пробные занятия для всех желающих.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Онлайн обучение программированию</p>
+    </footer>
+
+    <script src="ckript.js"></script>
+<div id="imageModal" class="fixed inset-0 bg-gray-900 bg-opacity-90 flex items-center justify-center z-50 hidden">  <!-- Темный фон: gray-900 с 90% opacity -->
+    <span class="close absolute top-4 right-4 text-white text-3xl font-bold cursor-pointer hover:text-gray-300 transition-colors duration-200">&times;</span>
+    <div class="bg-black rounded-lg shadow-2xl p-2">  <!-- Обёртка для тени и отступов -->
+        <img id="modalImg" src="" alt="Увеличенное фото" class="w-[1000px] h-[625px] object-contain rounded-lg max-w-full max-h-full">  <!-- Размер: 1000x625 (16:10, чуть меньше ноутбука) -->
+    </div>
+</div>
+</body>
+</html>
