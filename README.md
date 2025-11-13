@@ -40,8 +40,7 @@
 - **Кнопка "Наверх"**: Фиксированная кнопка с обработчиком `click` для `window.scrollTo({ behavior: 'smooth' })` и `scroll`-событием для показа/скрытия.
 - **Фильтры галереи**: Кнопки с `data-category`, обработка `click` для добавления/удаления класса `active` и фильтрации изображений по `data-category`.
 - **Модальное окно**: Обработчики `click` на фото для открытия (`classList.remove('hidden')`), на крестик/фон/Escape для закрытия.
-- **Аккордеон**: Клик по заголовкам (`accordion-title`) для toggle класса `active` на родительском элементе, с CSS-transition для анимации `max-height`.
-- **Hover-эффекты**: CSS `hover:scale-105` и `shadow-2xl` на карточках и фото для визуальной обратной связи.
+- **Аккордеон**
 
 Все элементы используют события DOM (addEventListener) и классы для состояний.
 
@@ -53,8 +52,8 @@
 Решил через F12 (DevTools) — тестировал селекторы в Console.
 
 ### Какие знания получены в ЛЛМ?
-- **Основы JS**: Обработка событий (`addEventListener`), манипуляции DOM (`classList`, `getAttribute`), асинхронность (не использовал, но понял про `DOMContentLoaded`).
+- **Основы JS**: Обработка событий (`addEventListener`), манипуляции DOM (`classList`, `getAttribute`), асинхронность.
 - **Tailwind CSS**: Arbitrary values (`w-[1000px]`), transitions (`hover:scale-105`), grid/flex для layout.
 - **Отладка**: F12 для live-изменений (Styles/Console), фикс ошибок (пути к файлам, опечатки в именах).
 - **Дизайн**: Объёмные карточки (shadows, transforms) и UX (плавные анимации, подсветка текста галочками).
-- **GitHub**: Загрузка проекта (git add/commit/push), Markdown для README с изображениями.
+- **GitHub**: Загрузка проекта (git add/commit/push).
